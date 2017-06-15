@@ -6,6 +6,8 @@ class Sequence
   end
 
   def start
+    return nil if @member.empty?
+    
     res = [@member]
     @steps.times { res << calculate_next }
     res
